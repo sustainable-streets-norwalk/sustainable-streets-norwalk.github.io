@@ -1,2 +1,0 @@
-![Earth Day](earthday.png)
-
