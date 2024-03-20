@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norwalk Earth Day</title>
     <style>
-        body {
-            /* Sets the background image to earthday.png */
-            background-image: url('earthday.png');
-            
-            /* Ensures the background covers the entire page */
-            background-size: cover;
-            
-            /* Ensures the background doesn't repeat */
-            background-repeat: no-repeat;
-            
-            /* Fixes the background to the viewport, so it doesn't move when you scroll */
-            background-attachment: fixed;
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Optional: background color */
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* This makes sure the aspect ratio is maintained */
         }
     </style>
 </head>
 <body>
-
+    <img src="earthday.png" alt="Norwalk Earth Day Poster">
 </body>
 </html>
