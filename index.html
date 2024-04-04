@@ -89,7 +89,7 @@
             let spanishDivs = document.querySelectorAll('.spanish');
 
             img.src = img.src.endsWith('earthday.png') ? 'ddlt.png' : 'earthday.png';
-            btn.textContent = img.src.endsWith('earthday.png') ? 'Leer en español' : 'Read in English';
+            btn.textContent = img.src.endsWith('earthday.png') ? 'Leer en Español' : 'Read in English';
 
             englishDivs.forEach(div => div.style.display = img.src.endsWith('earthday.png') ? 'block' : 'none');
             spanishDivs.forEach(div => div.style.display = img.src.endsWith('earthday.png') ? 'none' : 'block');
@@ -98,7 +98,7 @@
     </script>
 
     <div class="hero-section">
-        <image src="earthday.png" style="max-width: 50%; height: auto;"></image>
+        <image src="earthday.png" style="width: auto; height: auto"></image>
         <button class="button-2" onclick="switchImage()">Leer en Español</button>
         <div class="english">
             <h1>Join Us for Earth Day!</h1>
@@ -138,6 +138,8 @@
                         8 Park St, Norwalk, CT 06851</a></p>
             </div>
         </section>
+
+
         <section class="about">
             <div class="english">
                 <h2>About the Event</h2>
@@ -216,6 +218,20 @@
         </section>
     </div>
 
+    <section class="sign-up">
+        <div class="english">
+            <h2>Stay Connected</h2>
+            <p>Sign up for our newsletter to stay informed about future events and initiatives:</p>
+            <a href="https://norwalkearthdayfestival.us18.list-manage.com/subscribe?u=d85c1520ab6c10d275e704008&id=be77c3507f"
+                target="_blank">Subscribe to our Newsletter</a>
+        </div>
+        <div class="spanish" style="display: none;">
+            <h2>Mantente Conectado</h2>
+            <p>Regístrate en nuestro boletín para mantenerte informado sobre eventos e iniciativas futuras:</p>
+            <a href="https://norwalkearthdayfestival.us18.list-manage.com/subscribe?u=d85c1520ab6c10d275e704008&id=be77c3507f"
+                target="_blank">Suscríbete a nuestro Boletín</a>
+        </div>
+    </section>
 
     <div class="footer">
         <a href="https://fb.me/e/3hS8vB4oc ">
