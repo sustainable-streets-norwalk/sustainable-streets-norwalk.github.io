@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Google tag (gtag.js) --> 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0CTW8JPSL"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-J0CTW8JPSL'); </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J0CTW8JPSL"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-J0CTW8JPSL'); </script>
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,73 +48,183 @@
         h2 {
             color: #0281bf
         }
+
+
+        .button-2 {
+            background-color: rgba(51, 51, 51, .15);
+            border-radius: 8px;
+            border-width: 0;
+            color: #333333;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 10px 12px;
+            text-align: center;
+            transition: all 200ms;
+            vertical-align: baseline;
+            white-space: nowrap;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
     </style>
 </head>
 
 <body>
 
+
+    <script>
+        function switchImage() {
+            let img = document.querySelector('img');
+            let btn = document.querySelector('button');
+            let englishDivs = document.querySelectorAll('.english');
+            let spanishDivs = document.querySelectorAll('.spanish');
+
+            img.src = img.src.endsWith('earthday.png') ? 'ddlt.png' : 'earthday.png';
+            btn.textContent = img.src.endsWith('earthday.png') ? 'Leer en español' : 'Read in English';
+
+            englishDivs.forEach(div => div.style.display = img.src.endsWith('earthday.png') ? 'block' : 'none');
+            spanishDivs.forEach(div => div.style.display = img.src.endsWith('earthday.png') ? 'none' : 'block');
+        }
+
+    </script>
+
     <div class="hero-section">
-        <image src="earthday.jpg" style="max-width: 100%; height: auto;"></image>
-        <h1>Join Us for Earth Day!</h1>
-        <p>This Earth Day, our community is coming together to clean up our local parks, plant trees, and learn about
-            sustainable living. Whether you're a seasoned environmentalist or just looking to make a positive impact,
-            there's something for everyone.</p>
-        <p>Join us at the 3rd  Annual Norwalk Earth Day Festival on the Norwalk Green on Saturday,
-            April 27th from 12:00 — 4:00 pm!</p>
+        <image src="earthday.png" style="max-width: 100%; height: auto;"></image>
+        <button class="button-2" onclick="switchImage()">Leer en español</button>
+        <div class="english">
+            <h1>Join Us for Earth Day!</h1>
+            <p>This Earth Day, our community is coming together to clean up our local parks, plant trees, and learn
+                about
+                sustainable living. Whether you're a seasoned environmentalist or just looking to make a positive
+                impact,
+                there's something for everyone.</p>
+            <p>Join us at the 3rd  Annual Norwalk Earth Day Festival on the Norwalk Green on Saturday,
+                April 27th from 12:00 — 4:00 pm!</p>
+        </div>
+        <div class="spanish" style="display: none;">
+            <h1>¡Únete a nosotros para el Día de la Tierra!</h1>
+            <p>Este Día de la Tierra, nuestra comunidad se une para limpiar nuestros parques locales, plantar árboles y
+                aprender sobre la vida sostenible. Ya seas un ambientalista experimentado o simplemente busques generar
+                un impacto positivo, hay algo para todos.</p>
+            <p>¡Únete a nosotros en el 3er Festival Anual del Día de la Tierra de Norwalk en Norwalk Green el sábado 27
+                de abril de 12:00 a 4:00 pm!</p>
+
+        </div>
     </div>
+
+
 
     <div class="content">
         <section class="schedule">
-            <p>Date: Saturday, April 27th</p>
-            <p>Time: 12:00 pm - 4:00 pm</p>
-            <p>Location: <a href="https://maps.app.goo.gl/TB5QWm4jHcJydASV8"> Norwalk Town Green
-                    8 Park St, Norwalk, CT 06851</a></p>
+            <div class="english">
+                <p>Date: Saturday, April 27th</p>
+                <p>Time: 12:00 pm - 4:00 pm</p>
+                <p>Location: <a href="https://maps.app.goo.gl/TB5QWm4jHcJydASV8"> Norwalk Town Green
+                        8 Park St, Norwalk, CT 06851</a></p>
+            </div>
+            <div class="spanish" style="display: none;">
+                <p>Fecha: Sábado, 27 de Abril</p>
+                <p>Hora: 12:00 pm - 4:00 pm</p>
+                <p>Ubicación: <a href="https://maps.app.goo.gl/TB5QWm4jHcJydASV8"> Norwalk Town Green
+                        8 Park St, Norwalk, CT 06851</a></p>
+            </div>
         </section>
         <section class="about">
-            <h2>About the Event</h2>
+            <div class="english">
+                <h2>About the Event</h2>
+                <p>This year’s free and family-friendly Norwalk’s Earth Day Festival (NEDF) will be bigger and
+                    better than ever! There will be activities and entertainment for all ages, including live music by
+                    the CUkes and guitarist Ian Biggs, a dance performance by the Norwalk Metropolitan Youth
+                    Ballet, Food Trucks, a ‘Picnic Grove’ with cozy blankets and seating, Guest Speakers, Tree
+                    Plantings on the Green, Yoga, Bike Repair Station, Sound Healing, and other various healing
+                    arts along with a wide variety of exhibitors including students from across our Norwalk Public
+                    schools—and there’s so much for kids to enjoy too, including Touch-A-Truck and Giant Jenga on
+                    the Green!</p>
+                <p><b>Our theme is finding balance and harmony in each of the five elements: Earth, Air, Water,
+                        Fire/Energy, and Spirit.</b> Throughout the day, exhibitors and scheduled speakers will
+                    highlight
+                    the small steps we can take that make big impacts in healing the Earth and ourselves (and save
+                    us money in the process, too)!</p>
+                <p>Norwalk’s Earth Day Festival is a community-led event drawing support across Norwalk’s
+                    leading environmental groups, civic organizations, municipal agencies, local schools, legislative
+                    leaders, and our Mayor.  Festival-goers will enjoy learning more about the steps Norwalk is
+                    taking to protect the environment and our green spaces by increasing walkability,
+                    improving sidewalks, adding bike parking, expanding public transportation, providing clean air
+                    protection, water safety, and sustainability, and promoting beautification (tree plantings).</p>
+                <p>To encourage residents to <b>“Get to The Green, Without a Machine”</b> organized walks and bike
+                    rides will originate from different points in the City in the morning and end at The
+                    Green at noon. Keep Norwalk Beautiful has a planned clean-up as well… More details to
+                    come!</p>
+                <p>Thanks to the First Taxing District for hosting our event on Norwalk The Green. Special thanks to our
+                    amazing
+                    sponsors:
+                    Norwalk Land Trust, Norwalk Green Association, Norwalk Water Rivershed Association, Norwalk
+                    Tree
+                    Alliance,
+                    Fairfield County Bank, Sound Federal Credit Union, and the City of Norwalk! Your support made this
+                    event
+                    possible!</p>
+            </div>
+            <div class="spanish" style="display: none;">
+                <h2>Sobre el Evento</h2>
 
-            <p>This year’s free and family-friendly Norwalk’s Earth Day Festival (NEDF) will be bigger and
-                better than ever! There will be activities and entertainment for all ages, including live music by
-                the CUkes and guitarist Ian Biggs, a dance performance by the Norwalk Metropolitan Youth
-                Ballet, Food Trucks, a ‘Picnic Grove’ with cozy blankets and seating, Guest Speakers, Tree
-                Plantings on the Green, Yoga, Bike Repair Station, Sound Healing, and other various healing
-                arts along with a wide variety of exhibitors including students from across our Norwalk Public
-                schools—and there’s so much for kids to enjoy too, including Touch-A-Truck and Giant Jenga on
-                the Green!</p>
+                <p>¡El Festival del Día de la Tierra de Norwalk (NEDF) de este año, gratuito y familiar, será más grande
+                    y mejor que nunca! Habrá actividades y entretenimiento para todas las edades, incluyendo música en
+                    vivo de los CUkes y el guitarrista Ian Biggs, una presentación de danza del Norwalk Metropolitan
+                    Youth Ballet, Food Trucks, un 'Picnic Grove' con mantas y asientos acogedores, Oradores Invitados,
+                    Plantaciones de Árboles en el Green, Yoga, Estación de Reparación de Bicicletas, Sanación con Sonido
+                    y otras diversas artes curativas junto con una gran variedad de expositores, incluyendo estudiantes
+                    de todas las escuelas públicas de Norwalk, ¡y hay mucho para que los niños disfruten también,
+                    incluyendo Touch-A-Truck y Giant Jenga en el Green!</p>
 
-            <p><b>Our theme is finding balance and harmony in each of the five elements: Earth, Air, Water,
-                    Fire/Energy, and Spirit.</b> Throughout the day, exhibitors and scheduled speakers will highlight
-                the small steps we can take that make big impacts in healing the Earth and ourselves (and save
-                us money in the process, too)!</p>
+                <p><b>Nuestro tema es encontrar el equilibrio y la armonía en cada uno de los cinco elementos: Tierra,
+                        Aire, Agua, Fuego/Energía y Espíritu.</b> A lo largo del día, los expositores y los oradores
+                    programados destacarán los pequeños pasos que podemos dar que tienen grandes impactos en la curación
+                    de la Tierra y de nosotros mismos (¡y también nos ahorran dinero en el proceso!).</p>
 
-            <p>Norwalk’s Earth Day Festival is a community-led event drawing support across Norwalk’s
-                leading environmental groups, civic organizations, municipal agencies, local schools, legislative
-                leaders, and our Mayor.  Festival-goers will enjoy learning more about the steps Norwalk is
-                taking to protect the environment and our green spaces by increasing walkability,
-                improving sidewalks, adding bike parking, expanding public transportation, providing clean air
-                protection, water safety, and sustainability, and promoting beautification (tree plantings).</p>
+                <p>El Festival del Día de la Tierra de Norwalk es un evento dirigido por la comunidad que atrae el apoyo
+                    de los principales grupos ambientales de Norwalk, organizaciones cívicas, agencias municipales,
+                    escuelas locales, líderes legislativos y nuestro alcalde. Los asistentes al festival disfrutarán
+                    aprendiendo más sobre los pasos que Norwalk está tomando para proteger el medio ambiente y nuestros
+                    espacios verdes aumentando la transitabilidad, mejorando las aceras, agregando estacionamiento para
+                    bicicletas, expandiendo el transporte público, proporcionando protección del aire limpio, seguridad
+                    del agua y sostenibilidad, y promoviendo el embellecimiento (plantaciones de árboles).</p>
 
-            <p>To encourage residents to <b>“Get to The Green, Without a Machine”</b> organized walks and bike
-                rides will originate from different points in the City in the morning and end at The
-                Green at noon. Keep Norwalk Beautiful has a planned clean-up as well… More details to
-                come!</p>
+                <p>Para animar a los residentes a <b>"Llegar al Green, sin una máquina"</b>, se organizarán caminatas y
+                    paseos en bicicleta que se originarán desde diferentes puntos de la ciudad por la mañana y
+                    terminarán en el Green al mediodía. Keep Norwalk Beautiful también tiene una limpieza planificada...
+                    ¡Más detalles por venir!</p>
 
-            <p>Thanks to the First Taxing District for hosting our event on Norwalk The Green. Special thanks to our
-                amazing
-                sponsors:
+                <p>Gracias al First Taxing District por organizar nuestro evento en Norwalk The Green. Un agradecimiento
+                    especial a nuestros increíbles patrocinadores:
 
-                Norwalk Land Trust, Norwalk Green Association, Norwalk Water Rivershed Association, Norwalk
-                Tree
-                Alliance,
-                Fairfield County Bank, Sound Federal Credit Union, and the City of Norwalk! Your support made this event
-                possible!</p>
+                    Norwalk Land Trust, Norwalk Green Association, Norwalk Water Rivershed Association, Norwalk Tree
+                    Alliance, Fairfield County Bank, Sound Federal Credit Union y la Ciudad de Norwalk. ¡Su apoyo hizo
+                    posible este evento!</p>
+
+            </div>
+
         </section>
     </div>
 
 
     <div class="footer">
         <a href="https://fb.me/e/3hS8vB4oc ">
-            <p>Follow us on social media for updates!</p>
+            <div class="english">
+                <p>Follow us on social media for updates!</p>
+            </div>
+            <div class="spanish" style="display: none;">
+                <p>¡Síganos en las redes sociales para obtener actualizaciones!</p>
+            </div>
         </a>
     </div>
 
